@@ -13,7 +13,6 @@ export default ({
 }) => (
   <Layout>
     <Head title={`Blog page ${pageInfo.currentPage - 1}`} />
-    <Pagination pageInfo={pageInfo} />
     {edges.map(PostTitle)}
     <Pagination pageInfo={pageInfo} />
   </Layout>

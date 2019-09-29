@@ -1,6 +1,5 @@
 import React from "react"
 
-import Footer from "../components/footer"
 import Header from "../components/header"
 
 import "../styles/reset.css"
@@ -13,6 +12,5 @@ export default ({ children }) => (
       <Header />
       {children}
     </div>
-    <Footer />
   </div>
 )

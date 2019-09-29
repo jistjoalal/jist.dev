@@ -18,17 +18,13 @@ export default () => {
 
   return (
     <header className={styles.header}>
-      <h1>
-        <Link className={styles.title} to="/">
-          {title}
-        </Link>
+      <h1 className={styles.title}>
+        <Link to="/">{title}</Link>
       </h1>
       <nav>
-        <ul className={styles.navList}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="https://github.com/jistjoalal/blog">Github</NavLink>
-        </ul>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="https://github.com/jistjoalal/blog">Github</NavLink>
       </nav>
     </header>
   )

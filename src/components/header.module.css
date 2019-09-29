@@ -1,8 +1,17 @@
 .header {
-  padding: 1rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 .title {
+  margin: 0;
+}
+
+.title > a {
   color: black;
   font-size: 3rem;
   text-decoration: none;
@@ -10,6 +19,7 @@
 
 .nav-list {
   display: flex;
+  align-items: flex-end;
   list-style-type: none;
   margin: 0;
 }
