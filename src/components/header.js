@@ -25,6 +25,7 @@ export default () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/project">Projects</NavLink>
+        <NavLink to="/about">About</NavLink>
         <NavLink to="https://github.com/jistjoalal/blog">Github</NavLink>
       </nav>
     </header>
