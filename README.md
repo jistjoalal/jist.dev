@@ -31,6 +31,7 @@ git push
 - generate table of contents for each post
 - dark theme button
 - improve PostTitle and ProjectTitle components (img, description, etc.)
-- particle visualization
 - make some project posts
-- mobile styles
+- update readme
+- deploy
+- refactor / optimize particle animation
