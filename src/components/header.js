@@ -38,19 +38,25 @@ export default () => {
       <h1 className={styles.title}>
         <Link to="/">{title}</Link>
       </h1>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/blog">Blog</NavLink>
-        <NavLink to="/project">Projects</NavLink>
-        <NavLink to="/about">About</NavLink>
-      </nav>
-      <nav>
-        <NavLink to="https://github.com/jistjoalal/">
-          <GithubIcon />
-        </NavLink>
-        <NavLink to="https://www.codewars.com/users/jistjoalal">
-          <img style={{ width: "20px", marginBottom: "-2px" }} src="/cw.png" />
-        </NavLink>
+      <nav className={styles.nav}>
+        <div className={styles.navSection}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/project">Projects</NavLink>
+          <NavLink to="/about">About</NavLink>
+        </div>
+        <div className={styles.navSection}>
+          <NavLink to="https://github.com/jistjoalal/">
+            <GithubIcon />
+          </NavLink>
+          <NavLink to="https://www.codewars.com/users/jistjoalal">
+            <img
+              style={{ width: "20px", marginBottom: "-2px" }}
+              src="/cw.png"
+              alt="Codewars icon"
+            />
+          </NavLink>
+        </div>
       </nav>
     </header>
   )

@@ -9,3 +9,21 @@ a:hover {
 pre {
   margin-bottom: 2em !important;
 }
+
+video {
+  width: 800px;
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 800px) {
+  pre {
+    font-size: 0.65rem !important;
+  }
+  .katex-html {
+    font-size: 0.75rem;
+  }
+  video {
+    width: 300px;
+  }
+}
