@@ -3,25 +3,27 @@ import { graphql } from "gatsby"
 
 import Head from "../components/head"
 import Layout from "../components/layout"
-import PostTitle from "../components/PostTitle"
+import ProjectTitle from "../components/ProjectTitle"
 import Pagination from "../components/Pagination"
 
 export default ({
   data: {
     allMarkdownRemark: { edges, pageInfo },
   },
-}) => (
-  <Layout>
-    <Head title={`Blog | page ${pageInfo.currentPage - 1}`} />
-    {edges.map(PostTitle)}
-    <Pagination pageInfo={pageInfo} type="blog" />
-  </Layout>
-)
+}) => {
+  return (
+    <Layout>
+      <Head title={`Projects | page ${pageInfo.currentPage - 1}`} />
+      {edges.map(ProjectTitle)}
+      <Pagination pageInfo={pageInfo} type="project" />
+    </Layout>
+  )
+}
 
-export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+export const projectListQuery = graphql`
+  query projectListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      filter: { fields: { type: { eq: "blog" } } }
+      filter: { fields: { type: { eq: "project" } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip
@@ -39,6 +41,7 @@ export const blogListQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMMM Do, YYYY")
+            description
           }
         }
       }

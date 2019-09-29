@@ -1,14 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: "Jist",
-    author: "Jist",
+    title: "jist.dev",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "src",
+        name: "project",
+        path: `${__dirname}/project/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
         path: `${__dirname}/blog/`,
       },
     },
