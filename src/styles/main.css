@@ -1,0 +1,11 @@
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #333333;
+}
+
+pre {
+  margin-bottom: 2em !important;
+}
