@@ -44,6 +44,8 @@ export const projectListQuery = graphql`
             title
             date(formatString: "MMMM Do, YYYY")
             description
+            repo
+            techs
           }
         }
       }

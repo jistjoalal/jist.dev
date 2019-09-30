@@ -39,6 +39,7 @@ export const indexQuery = graphql`
             title
             date(formatString: "MMMM Do, YYYY")
             description
+            techs
           }
           fields {
             slug

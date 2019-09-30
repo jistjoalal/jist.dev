@@ -9,6 +9,8 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
+        repo
       }
       html
     }
@@ -18,7 +20,7 @@ export const query = graphql`
 export default ({
   data: {
     markdownRemark: {
-      frontmatter: { title },
+      frontmatter: { title, description, repo },
       html,
     },
   },
@@ -26,6 +28,10 @@ export default ({
   <Layout>
     <Head title={title} />
     <h1>{title}</h1>
+    <a href={repo}>Code on Github</a>
+    <p />
+    <h2>Description</h2>
+    <p>{description}</p>
     <div dangerouslySetInnerHTML={{ __html: html }} />
   </Layout>
 )

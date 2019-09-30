@@ -6,7 +6,7 @@ import styles from "./ProjectTitle.module.css"
 
 const ProjectTitle = ({
   node: {
-    frontmatter: { title, date, description },
+    frontmatter: { title, date, description, techs },
     fields: { slug },
   },
   theme,
@@ -17,13 +17,14 @@ const ProjectTitle = ({
   const descriptionStyle =
     styles.description +
     (theme === "dark" ? " " + styles.description__dark : "")
-  console.log(theme)
+
   return (
     <li className={styles.post}>
       <Link className={link} to={`/project/${slug}`}>
         <h2 className={titleStyle}>{title}</h2>
         <p className={styles.text}>{date}</p>
         <p className={descriptionStyle}>{description}</p>
+        <p className={styles.text}>{techs}</p>
       </Link>
     </li>
   )

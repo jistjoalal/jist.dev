@@ -18,3 +18,7 @@ npm run develop  # runs @ localhost:8000
 - improve PostTitle and ProjectTitle components (img, description, etc.)
 - mouse interaction w/ animation
 - make some project posts
+  - ccshare
+  - screenshotter
+  - darksweeper
+  - puzzles?
