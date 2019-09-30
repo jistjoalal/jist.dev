@@ -19,6 +19,4 @@ npm run develop  # runs @ localhost:8000
 - disable animation button
 - improve PostTitle and ProjectTitle components (img, description, etc.)
 - make some project posts
-- deploy
 - mouse interaction w/ animation
-- back to top not showing in chrome

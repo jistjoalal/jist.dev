@@ -10,7 +10,8 @@ export default class Footer extends React.Component {
     }
   }
   componentDidMount() {
-    this.setState({ show: window.scrollMaxY > 800 })
+    const height = document.body.scrollHeight
+    this.setState({ show: height > 800 })
   }
   render() {
     return (
