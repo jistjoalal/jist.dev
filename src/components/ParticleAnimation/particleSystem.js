@@ -15,9 +15,8 @@ import {
 let canvas, ctx
 let initialized = false
 
-const theme = localStorage.getItem("theme") || "light"
-let bgColor = ANIMATION_BG[theme]
-let fgColor = ANIMATION_FG[theme]
+let bgColor = ANIMATION_BG["light"]
+let fgColor = ANIMATION_FG["light"]
 
 const dots = new Dots(NUM_DOTS)
 

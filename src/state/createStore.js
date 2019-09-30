@@ -28,8 +28,10 @@ const reducer = (state, action) => {
 }
 
 const showAnimation =
-  localStorage.getItem("showAnimation") === "false" ? false : true
-const theme = localStorage.getItem("theme") || "light"
+  global.localStorage && localStorage.getItem("showAnimation") === "false"
+    ? false
+    : true
+const theme = (global.localStorage && localStorage.getItem("theme")) || "light"
 const initialState = { showAnimation, theme }
 
 const createStore = () => reduxCreateStore(reducer, initialState)
