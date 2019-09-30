@@ -3,22 +3,15 @@
   justify-content: flex-end;
 }
 
-i {
-  display: inline-block;
-  font-style: normal;
-  position: relative;
-}
-
-i.arrow {
+.button {
+  border: none;
+  outline: none;
+  background: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
-  border-right: 0.25em solid #333;
-  border-top: 0.25em solid #333;
-  transform: rotate(-45deg);
+  font-size: 2rem;
+  color: #333;
 }
 
-i.arrow:hover {
-  border-right: 0.25em solid #000;
-  border-top: 0.25em solid #000;
+.button:hover {
+  color: #000;
 }

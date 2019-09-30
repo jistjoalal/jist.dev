@@ -1,4 +1,5 @@
 import React from "react"
+import { GoChevronUp } from "react-icons/go"
 
 import styles from "./footer.module.css"
 
@@ -17,11 +18,12 @@ export default class Footer extends React.Component {
     return (
       this.state.show && (
         <footer className={styles.footer}>
-          <i
-            alt="Top"
-            className={styles.arrow}
+          <button
+            className={styles.button}
             onClick={_ => window.scrollTo(0, 0)}
-          />
+          >
+            <GoChevronUp />
+          </button>
         </footer>
       )
     )

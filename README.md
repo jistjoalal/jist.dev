@@ -19,5 +19,3 @@ npm run develop  # runs @ localhost:8000
 - mouse interaction w/ animation
 - make some project posts
 - dark theme button
-- use react-icons for nav buttons and back to top
-- store animation state in redux?
