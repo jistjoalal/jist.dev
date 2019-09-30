@@ -8,13 +8,13 @@
   --light-theme-trim: #ccc;
   --light-theme-bg: white;
 
-  --dark-theme-text: #ccc;
+  --dark-theme-text: #eee;
   --dark-theme-link: #999;
   --dark-theme-link-hover: #ccc;
-  --dark-theme-off-bg: #090909;
-  --dark-theme-off-bg-hover: #272727;
+  --dark-theme-off-bg: #12141a;
+  --dark-theme-off-bg-hover: #0d0e13;
   --dark-theme-trim: #333;
-  --dark-theme-bg: black;
+  --dark-theme-bg: #171920;
 
   --text-muted: #777777;
 }

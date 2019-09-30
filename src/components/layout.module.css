@@ -52,6 +52,21 @@
 .content__dark a:hover {
   color: var(--dark-theme-link-hover);
 }
+.content pre {
+  background: var(--light-theme-bg);
+}
+
+.content__dark pre {
+  background: var(--dark-theme-bg);
+}
+
+.content pre * {
+  color: var(--light-theme-text);
+}
+
+.content__dark pre * {
+  color: var(--dark-theme-text);
+}
 
 @media (max-width: 800px) {
   .container {

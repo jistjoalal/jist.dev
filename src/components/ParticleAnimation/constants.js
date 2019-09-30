@@ -5,7 +5,7 @@ export const NUM_DOTS = 100
 
 export const ANIMATION_BG = {
   light: "white",
-  dark: "black",
+  dark: "#171920",
 }
 export const ANIMATION_FG = {
   light: "black",

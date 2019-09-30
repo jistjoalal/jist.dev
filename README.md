@@ -22,4 +22,5 @@ npm run develop  # runs @ localhost:8000
   - screenshotter
   - darksweeper
   - puzzles?
-- less harsh dark theme?
+- render tech list from data in project template
+- customize prism css for syntax
