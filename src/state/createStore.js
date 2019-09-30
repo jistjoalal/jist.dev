@@ -14,9 +14,13 @@ const ANIMATION_FG = {
 
 const reducer = (state, action) => {
   if (action.type === "TOGGLE_ANIMATION") {
+    const showAnimation = !state.showAnimation
+
+    localStorage.setItem("showAnimation", showAnimation)
+
     return {
       ...state,
-      showAnimation: !state.showAnimation,
+      showAnimation,
     }
   }
   if (action.type === "TOGGLE_THEME") {
@@ -24,6 +28,9 @@ const reducer = (state, action) => {
     const bg = ANIMATION_BG[theme]
     const fg = ANIMATION_FG[theme]
     setColors(bg, fg)
+
+    localStorage.setItem("theme", theme)
+
     return {
       ...state,
       theme,
@@ -32,7 +39,10 @@ const reducer = (state, action) => {
   return state
 }
 
-const initialState = { showAnimation: true, theme: "light" }
+const showAnimation =
+  localStorage.getItem("showAnimation") === "false" ? false : true
+const theme = localStorage.getItem("theme") || "light"
+const initialState = { showAnimation, theme }
 
 const createStore = () => reduxCreateStore(reducer, initialState)
 export default createStore

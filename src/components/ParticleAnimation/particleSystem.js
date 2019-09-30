@@ -13,8 +13,9 @@ const WIDTH = 2000
 const HEIGHT = 4000
 const NUM_DOTS = 100
 
-let BG_COLOR = "white"
-let FG_COLOR = "black"
+const theme = localStorage.getItem("theme") || "light"
+let BG_COLOR = theme === "light" ? "white" : "black"
+let FG_COLOR = theme === "light" ? "black" : "white"
 
 class Dot {
   static INIT_V = 1
