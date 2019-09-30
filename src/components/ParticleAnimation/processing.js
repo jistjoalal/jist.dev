@@ -41,6 +41,7 @@ export async function run(cvs, setup, draw, fps) {
   ctx = canvas.getContext("2d")
   setup()
   draw()
+  await sleep(1000 / fps)
   if (initialized) return
   initialized = true
   while (true) {

@@ -1,6 +1,8 @@
 import React from "react"
 
 import Header from "../components/header"
+import Footer from "../components/Footer"
+
 import ParticleAnimation from "./ParticleAnimation"
 
 import "../styles/reset.css"
@@ -14,6 +16,7 @@ export default ({ children }) => (
       <div className={styles.content}>
         <Header />
         {children}
+        <Footer />
       </div>
     </div>
   </div>

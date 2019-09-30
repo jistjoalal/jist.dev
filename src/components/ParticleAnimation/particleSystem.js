@@ -16,7 +16,7 @@ const NUM_DOTS = ~~(window.innerWidth / 10)
 
 class Dot {
   static INIT_V = 1
-  static COLOR = "rgba(64, 64, 64, 1)"
+  static COLOR = "rgba(0, 0, 0, 1)"
 
   constructor() {
     this.id = Date.now() - ~~(Math.random() * Date.now())
