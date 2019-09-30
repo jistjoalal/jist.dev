@@ -15,8 +15,9 @@ npm run develop  # runs @ localhost:8000
 
 - post tags (possible in markdown?)
 - generate table of contents for each post
-- dark theme button
-- disable animation button
 - improve PostTitle and ProjectTitle components (img, description, etc.)
-- make some project posts
 - mouse interaction w/ animation
+- make some project posts
+- dark theme button
+- use react-icons for nav buttons and back to top
+- store animation state in redux?
