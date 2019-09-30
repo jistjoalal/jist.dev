@@ -8,17 +8,25 @@
   justify-content: space-between;
   padding-bottom: 1rem;
   padding-left: 0.5rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--light-theme-trim);
+}
+
+.nav__dark {
+  border-bottom-color: var(--dark-theme-trim);
 }
 
 .title {
   margin: 0 1rem 1rem 0.25rem;
 }
 
-.title > a {
-  color: black;
+.title a {
+  color: var(--light-theme-text) !important;
   font-size: 3rem;
   text-decoration: none;
+}
+
+.title__dark a {
+  color: var(--dark-theme-text) !important;
 }
 
 @media (max-width: 800px) {

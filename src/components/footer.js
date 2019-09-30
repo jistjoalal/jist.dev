@@ -1,9 +1,10 @@
 import React from "react"
+import { connect } from "react-redux"
 import { GoChevronUp } from "react-icons/go"
 
 import styles from "./footer.module.css"
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -15,13 +16,13 @@ export default class Footer extends React.Component {
     this.setState({ show: height > 800 })
   }
   render() {
+    const { theme } = this.props
+    const button =
+      styles.button + (theme === "dark" ? " " + styles.button__dark : "")
     return (
       this.state.show && (
         <footer className={styles.footer}>
-          <button
-            className={styles.button}
-            onClick={_ => window.scrollTo(0, 0)}
-          >
+          <button className={button} onClick={_ => window.scrollTo(0, 0)}>
             <GoChevronUp />
           </button>
         </footer>
@@ -29,3 +30,7 @@ export default class Footer extends React.Component {
     )
   }
 }
+
+const ConnectedFooter = connect(({ theme }) => ({ theme }))(Footer)
+
+export default ConnectedFooter

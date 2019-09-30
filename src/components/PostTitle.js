@@ -1,19 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
+import { connect } from "react-redux"
 
 import styles from "./PostTitle.module.css"
 
-export default ({
+const PostTitle = ({
   node: {
-    id,
     frontmatter: { title, date },
     fields: { slug },
   },
-}) => (
-  <li key={id} className={styles.post}>
-    <Link className={styles.link} to={`/blog/${slug}`}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.text}>{date}</p>
-    </Link>
-  </li>
-)
+  theme,
+}) => {
+  const link = styles.link + (theme === "dark" ? " " + styles.link__dark : "")
+  const titleStyle =
+    styles.title + (theme === "dark" ? " " + styles.title__dark : "")
+  return (
+    <li className={styles.post}>
+      <Link className={link} to={`/blog/${slug}`}>
+        <h2 className={titleStyle}>{title}</h2>
+        <p className={styles.text}>{date}</p>
+      </Link>
+    </li>
+  )
+}
+
+const ConnectedPostTitle = connect(({ theme }) => ({ theme }))(PostTitle)
+
+export default ConnectedPostTitle

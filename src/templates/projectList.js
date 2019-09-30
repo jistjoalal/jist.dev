@@ -14,7 +14,9 @@ export default ({
   return (
     <Layout>
       <Head title={`Projects | page ${pageInfo.currentPage - 1}`} />
-      {edges.map(ProjectTitle)}
+      {edges.map(edge => (
+        <ProjectTitle key={edge.node.id} node={edge.node} />
+      ))}
       <Pagination pageInfo={pageInfo} type="project" />
     </Layout>
   )

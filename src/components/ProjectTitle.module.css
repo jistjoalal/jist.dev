@@ -8,7 +8,7 @@
 }
 
 .link {
-  background: #f4f4f4;
+  background: var(--light-theme-off-bg);
   color: black;
   display: block;
   padding: 1rem;
@@ -16,15 +16,37 @@
 }
 
 .link:hover {
-  background: #e4e4e4;
+  background: var(--light-theme-off-bg-hover);
+}
+
+.link__dark {
+  background: var(--dark-theme-off-bg);
+  color: white;
+}
+
+.link__dark:hover {
+  background: var(--dark-theme-off-bg-hover);
 }
 
 .title {
   margin-bottom: 0;
+  color: var(--light-theme-text);
+}
+
+.title__dark {
+  color: var(--dark-theme-text);
 }
 
 .text {
-  color: #777777;
+  color: var(--text-muted);
   font-size: 0.8rem;
   font-style: italic;
+}
+
+.description {
+  color: var(--light-theme-text);
+}
+
+.description__dark {
+  color: var(--dark-theme-text);
 }

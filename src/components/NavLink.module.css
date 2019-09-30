@@ -1,14 +1,26 @@
 .nav-item {
-  color: #999999;
+  color: var(--light-theme-link);
   font-size: 1rem;
   margin: 0.75rem;
   text-decoration: none;
 }
 
 .nav-item:hover {
-  color: #666666;
+  color: var(--light-theme-link-hover);
 }
 
-.active-nav-item {
-  color: #333333;
+.activeNavItem {
+  color: var(--light-theme-text) !important;
+}
+
+.nav-item {
+  color: var(--dark-theme-link);
+}
+
+.nav-item:hover {
+  color: var(--dark-theme-link-hover);
+}
+
+.activeNavItem__dark {
+  color: var(--dark-theme-text) !important;
 }

@@ -9,14 +9,15 @@ import {
 } from "./processing.js"
 
 const FPS = 60
-const BG_COLOR = "white"
 const WIDTH = 2000
 const HEIGHT = 4000
 const NUM_DOTS = 100
 
+let BG_COLOR = "white"
+let FG_COLOR = "black"
+
 class Dot {
   static INIT_V = 1
-  static COLOR = "rgba(0, 0, 0, 1)"
 
   constructor() {
     this.id = Date.now() - ~~(Math.random() * Date.now())
@@ -30,11 +31,10 @@ class Dot {
       rand(Dot.INIT_V * 2, -Dot.INIT_V),
       rand(Dot.INIT_V * 2, -Dot.INIT_V)
     )
-    this.color = Dot.COLOR
   }
 
   draw() {
-    ellipse(this.pos.x, this.pos.y, this.r, this.r, this.color)
+    ellipse(this.pos.x, this.pos.y, this.r, this.r, FG_COLOR)
   }
 
   update() {
@@ -62,7 +62,8 @@ class Dot {
     const max = 400
     if (d > max) return
     const opacity = (max - d) / max
-    line(this.pos, dj.pos, `rgba(0, 0, 0, ${opacity})`)
+    const color = FG_COLOR === "white" ? "255,255,255" : "0,0,0"
+    line(this.pos, dj.pos, `rgba(${color}, ${opacity})`)
   }
 }
 
@@ -99,4 +100,9 @@ function draw() {
 
 export default function(canvas) {
   run(canvas, setup, draw, FPS)
+}
+
+export function setColors(bg, fg) {
+  BG_COLOR = bg
+  FG_COLOR = fg
 }

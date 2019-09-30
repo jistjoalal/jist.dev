@@ -13,7 +13,9 @@ export default ({
 }) => (
   <Layout>
     <Head title={`Blog | page ${pageInfo.currentPage - 1}`} />
-    {edges.map(PostTitle)}
+    {edges.map(edge => {
+      return <PostTitle key={edge.node.id} node={edge.node} />
+    })}
     <Pagination pageInfo={pageInfo} type="blog" />
   </Layout>
 )

@@ -1,24 +1,29 @@
+/* COLORS */
+:root {
+  --light-theme-text: #333;
+  --light-theme-link: #666;
+  --light-theme-link-hover: #333;
+  --light-theme-off-bg: #f4f4f4;
+  --light-theme-off-bg-hover: #e4e4e4;
+  --light-theme-trim: #ccc;
+  --light-theme-bg: white;
+
+  --dark-theme-text: #ccc;
+  --dark-theme-link: #999;
+  --dark-theme-link-hover: #ccc;
+  --dark-theme-off-bg: #090909;
+  --dark-theme-off-bg-hover: #272727;
+  --dark-theme-trim: #333;
+  --dark-theme-bg: black;
+
+  --text-muted: #777777;
+}
+
+/* GENERIC */
 #___gatsby,
 #gatsby-focus-wrapper {
   width: 100%;
   height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: black;
-}
-
-a {
-  color: #666666;
-}
-
-a:hover {
-  color: #333333;
 }
 
 pre {
@@ -28,9 +33,9 @@ pre {
 video {
   width: 800px;
   padding: 0.25rem;
-  border: 1px solid #ccc;
 }
 
+/* MOBILE */
 @media (max-width: 800px) {
   pre {
     font-size: 0.65rem !important;

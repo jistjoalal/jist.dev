@@ -9,9 +9,17 @@
   background: none;
   cursor: pointer;
   font-size: 2rem;
-  color: #333;
+  color: var(--light-theme-link) !important;
 }
 
 .button:hover {
-  color: #000;
+  color: var(--light-theme-link-hover) !important;
+}
+
+.button__dark {
+  color: var(--dark-theme-link) !important;
+}
+
+.button__dark:hover {
+  color: var(--dark-theme-link-hover) !important;
 }

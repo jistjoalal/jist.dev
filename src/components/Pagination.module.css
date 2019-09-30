@@ -3,8 +3,29 @@
   justify-content: space-between;
   align-items: center;
   margin: 24px 0;
-  background: #f4f4f4;
   padding: 12px;
   width: 100%;
-  border: 1px solid #ddd;
+  background: var(--light-theme-off-bg);
+  color: var(--text-muted);
+}
+
+.list__dark {
+  background: var(--dark-theme-off-bg);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--light-theme-link);
+}
+
+.link:hover {
+  color: var(--light-theme-link-hover);
+}
+
+.link__dark {
+  color: var(--dark-theme-link);
+}
+
+.link__dark:hover {
+  color: var(--dark-theme-link-hover);
 }
