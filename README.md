@@ -21,3 +21,4 @@ npm run develop  # runs @ localhost:8000
 - make some project posts
 - deploy
 - mouse interaction w/ animation
+- back to top not showing in chrome

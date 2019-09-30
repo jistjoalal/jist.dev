@@ -12,7 +12,7 @@ const FPS = 60
 const BG_COLOR = "white"
 const WIDTH = 2000
 const HEIGHT = 4000
-const NUM_DOTS = ~~(window.innerWidth / 10)
+const NUM_DOTS = 100
 
 class Dot {
   static INIT_V = 1
@@ -20,7 +20,7 @@ class Dot {
 
   constructor() {
     this.id = Date.now() - ~~(Math.random() * Date.now())
-    this.r = ~~rand(2, 2)
+    this.r = ~~rand(4, 2)
     this.m = this.r ** 3 * Math.PI
     this.pos = new Vector(
       rand(WIDTH - this.r, this.r),
@@ -34,8 +34,7 @@ class Dot {
   }
 
   draw() {
-    const r = (WIDTH / window.innerWidth) * this.r
-    ellipse(this.pos.x, this.pos.y, r, r, this.color)
+    ellipse(this.pos.x, this.pos.y, this.r, this.r, this.color)
   }
 
   update() {
