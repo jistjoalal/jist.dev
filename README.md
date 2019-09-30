@@ -35,7 +35,4 @@ git push
 - make some project posts
 - update readme
 - deploy
-- refactor / optimize particle animation
-- scale animation in a more reasonable way
-- try to attach animation in html.js old school
 - mouse interaction w/ animation
