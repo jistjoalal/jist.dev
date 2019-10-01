@@ -52,5 +52,6 @@ module.exports = {
         trackingId: "UA-136906800-4",
       },
     },
+    `gatsby-plugin-catch-links`,
   ],
 }
