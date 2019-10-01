@@ -53,11 +53,11 @@
   color: var(--dark-theme-link-hover);
 }
 .content pre {
-  background: var(--light-theme-bg);
+  background: var(--light-theme-off-bg);
 }
 
 .content__dark pre {
-  background: var(--dark-theme-bg);
+  background: var(--dark-theme-off-bg);
 }
 
 .content pre * {
@@ -65,7 +65,7 @@
 }
 
 .content__dark pre * {
-  color: var(--dark-theme-text);
+  color: var(--dark-theme-link-hover);
 }
 
 @media (max-width: 800px) {

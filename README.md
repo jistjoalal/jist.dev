@@ -17,4 +17,3 @@ npm run develop  # runs @ localhost:8000
 - generate table of contents for each post
 - improve PostTitle and ProjectTitle components (img, description, etc.)
 - mouse interaction w/ animation
-- customize prism css for syntax
