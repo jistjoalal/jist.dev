@@ -11,16 +11,26 @@ export const query = graphql`
         title
         description
         repo
+        techs
       }
       html
     }
   }
 `
 
+const TECH_URLS = {
+  Gatsby: "https://www.gatsbyjs.org/",
+  React: "https://reactjs.org/",
+  Redux: "https://redux.js.org/",
+  GraphQL: "https://graphql.org/",
+  KaTeX: "https://katex.org/",
+  Prism: "https://prismjs.com/",
+}
+
 export default ({
   data: {
     markdownRemark: {
-      frontmatter: { title, description, repo },
+      frontmatter: { title, description, repo, techs },
       html,
     },
   },
@@ -32,6 +42,16 @@ export default ({
     <p />
     <h2>Description</h2>
     <p>{description}</p>
+
     <div dangerouslySetInnerHTML={{ __html: html }} />
+
+    <h2>Tech Used</h2>
+    <ul>
+      {techs.split`, `.map(tech => (
+        <li key={tech}>
+          <a href={TECH_URLS[tech]}>{tech}</a>
+        </li>
+      ))}
+    </ul>
   </Layout>
 )

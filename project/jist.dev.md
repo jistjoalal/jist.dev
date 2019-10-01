@@ -25,12 +25,3 @@ But writing is nothing compared to [practice](/blog/codewars). Which is why my b
 - **Particles**: I really like solving graph traversal problems so I decided to use a tiny canvas animation library I made to spice up my bland design with some floating graphs. I'm not the first to make this animation, but I did write my own code. Gatsby remounts components on route changes, so maintaining the animation state across routes took some finessing. Don't tell anyone but I used globals.
 
 - **My Eyes!!!**: The theme switcher is self-evident. Gatsby remounting also posed challenges for implementing this and the animation toggle button. I decided to use Redux to persist the state this time. Connecting all the components that needed to be theme-aware and writing separate stylesheets was a bit of work. I'm sure there's a better way that I'll eventually learn. For now, CSS variables helped!
-
-## Tech Used
-
-- [Gatsby](https://www.gatsbyjs.org/)
-- [React](https://reactjs.org/)
-- [Redux](https://redux.js.org/)
-- [GraphQL](https://graphql.org/)
-- [KaTeX](https://katex.org/)
-- [Prism](https://prismjs.com/)
