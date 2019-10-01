@@ -13,7 +13,8 @@ class Footer extends React.Component {
   }
   componentDidMount() {
     const height = document.body.scrollHeight
-    this.setState({ show: height > 800 })
+    const frame = window.innerHeight
+    this.setState({ show: height > frame })
   }
   render() {
     const { theme } = this.props

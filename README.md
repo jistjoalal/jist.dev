@@ -18,4 +18,3 @@ npm run develop  # runs @ localhost:8000
 - improve PostTitle and ProjectTitle components (img, description, etc.)
 - mouse interaction w/ animation
 - customize prism css for syntax
-- scroll button is less than optimal
