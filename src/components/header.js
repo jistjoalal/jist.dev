@@ -29,9 +29,10 @@ const Header = ({ theme }) => {
       <nav className={nav}>
         <div className={styles.navSection}>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/project">Projects</NavLink>
           <NavLink to="/about">About</NavLink>
+          <NavLink to="/project">Projects</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </div>
         <div className={styles.navSection}>
           <NavLink to="https://github.com/jistjoalal/">
