@@ -33,6 +33,10 @@ const TECH_URLS = {
   Cypress: "https://www.cypress.io/",
   Cheerio: "https://cheerio.js.org/",
   Meteor: "https://www.meteor.com/",
+  Puppeteer: "https://pptr.dev/",
+  Mocha: "https://mochajs.org/",
+  Chai: "https://www.chaijs.com/",
+  Heroku: "https://www.heroku.com/",
 }
 
 export default ({
