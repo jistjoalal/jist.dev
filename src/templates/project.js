@@ -29,6 +29,10 @@ const TECH_URLS = {
   Express: "http://expressjs.com/",
   MongoDB: "https://www.mongodb.com/",
   AWS: "https://aws.amazon.com/",
+  TravisCI: "https://travis-ci.com/",
+  Cypress: "https://www.cypress.io/",
+  Cheerio: "https://cheerio.js.org/",
+  Meteor: "https://www.meteor.com/",
 }
 
 export default ({
