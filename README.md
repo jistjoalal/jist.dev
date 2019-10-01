@@ -20,7 +20,7 @@ npm run develop  # runs @ localhost:8000
 - make some project posts
   - ccshare
   - screenshotter
-  - darksweeper
   - puzzles?
 - customize prism css for syntax
 - analytics
+- scroll button is less than optimal

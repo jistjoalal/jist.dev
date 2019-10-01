@@ -25,6 +25,10 @@ const TECH_URLS = {
   GraphQL: "https://graphql.org/",
   KaTeX: "https://katex.org/",
   Prism: "https://prismjs.com/",
+  Node: "https://nodejs.org/en/",
+  Express: "http://expressjs.com/",
+  MongoDB: "https://www.mongodb.com/",
+  AWS: "https://aws.amazon.com/",
 }
 
 export default ({
