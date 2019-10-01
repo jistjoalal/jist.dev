@@ -1,0 +1,25 @@
+.button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: -1;
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: var(--light-theme-link);
+}
+
+.button:hover {
+  color: var(--light-theme-link-hover);
+}
+
+.button__dark {
+  color: var(--dark-theme-link);
+}
+
+.button__dark:hover {
+  color: var(--dark-theme-link-hover);
+}

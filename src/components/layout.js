@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 
 import Header from "./header"
-import Footer from "./footer"
+import ScrollToTop from "./ScrollToTop"
 
 import ParticleAnimation from "./ParticleAnimation"
 import AnimationToggle from "./AnimationToggle"
@@ -27,9 +27,9 @@ const Layout = ({ children, showAnimation, theme }) => {
         <div className={content}>
           <Header />
           {children}
-          <Footer />
         </div>
       </div>
+      <ScrollToTop />
     </div>
   )
 }

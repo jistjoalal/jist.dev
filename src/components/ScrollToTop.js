@@ -2,9 +2,9 @@ import React from "react"
 import { connect } from "react-redux"
 import { GoChevronUp } from "react-icons/go"
 
-import styles from "./footer.module.css"
+import styles from "./ScrollToTop.module.css"
 
-class Footer extends React.Component {
+class ScrollToTop extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -22,16 +22,14 @@ class Footer extends React.Component {
       styles.button + (theme === "dark" ? " " + styles.button__dark : "")
     return (
       this.state.show && (
-        <footer className={styles.footer}>
-          <button className={button} onClick={_ => window.scrollTo(0, 0)}>
-            <GoChevronUp />
-          </button>
-        </footer>
+        <button className={button} onClick={_ => window.scrollTo(0, 0)}>
+          <GoChevronUp />
+        </button>
       )
     )
   }
 }
 
-const ConnectedFooter = connect(({ theme }) => ({ theme }))(Footer)
+const ConnectedScrollToTop = connect(({ theme }) => ({ theme }))(ScrollToTop)
 
-export default ConnectedFooter
+export default ConnectedScrollToTop
