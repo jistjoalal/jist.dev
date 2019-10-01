@@ -24,3 +24,4 @@ npm run develop  # runs @ localhost:8000
   - puzzles?
 - render tech list from data in project template
 - customize prism css for syntax
+- analytics
