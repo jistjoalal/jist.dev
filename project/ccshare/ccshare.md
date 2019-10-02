@@ -10,9 +10,11 @@ techs: "Meteor, React, AWS, Cheerio, Cypress, TravisCI"
 
 ## Impact
 
-Although this was just a learning project, the mission that it represents is a significant one. CCShare is a map of the [Common Core State Standards](http://www.corestandards.org/) for Math and English. Lesson plans, homework, and online tools (anything really) can be shared among teachers on CCShare. All resources are associated with learning standards and can be voted on similarly to reddit. The aim is to crowd-source the mountainous task of finding the most efficient free educational resources.
+Although this was just a learning project, the mission that it represents is a significant one. CCShare is a map of the [Common Core State Standards](http://www.corestandards.org/) for math. Lesson plans, homework, and online tools (anything really) can be shared among teachers on CCShare. All resources are associated with learning standards and can be voted on similarly to reddit. The aim is to crowd-source the mountainous task of finding the most efficient free educational resources.
 
 [Explore the demo](https://ccshare.herokuapp.com/)
+
+- Please be patient (~20 sec.) for heroku free tier :)
 
 ## Challenges
 
