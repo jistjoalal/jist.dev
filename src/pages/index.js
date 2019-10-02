@@ -20,11 +20,11 @@ export default ({
   return (
     <Layout>
       <Head title="Home" />
-      <h2>Latest Post</h2>
-      <PostTitle node={latest("blog")} />
-      <hr />
       <h2>Latest Project</h2>
       <ProjectTitle node={latest("project")} />
+      <hr />
+      <h2>Latest Blog Post</h2>
+      <PostTitle node={latest("blog")} />
     </Layout>
   )
 }

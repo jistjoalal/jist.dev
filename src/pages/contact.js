@@ -9,7 +9,9 @@ export default class Contact extends React.Component {
     return (
       <Layout>
         <Head title="Contact" />
-        <h2>To: shane@jist.dev</h2>
+        <h2>
+          To: <a href="mailto:shane@jist.dev">shane@jist.dev</a>
+        </h2>
         <ContactForm />
       </Layout>
     )
