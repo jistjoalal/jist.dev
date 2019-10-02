@@ -31,13 +31,13 @@ class ThemeProvider extends React.Component {
     this.setState({ animation })
   }
   componentDidMount() {
-    const theme = localStorage.getItem("theme")
-    if (theme) {
-      this.setState({ theme })
-    } else if (supportsDarkMode()) {
-      this.setState({ theme: "dark" })
-    }
+    // set theme to saved value, prefer dark, default light
+    const lsTheme = localStorage.getItem("theme")
+    const theme = lsTheme || (supportsDarkMode() ? "dark" : "light")
+    this.setState({ theme })
     setColors(theme)
+
+    // set animation to saved value, default true
     const animation =
       localStorage.getItem("animation") === "false" ? false : true
     this.setState({ animation })
@@ -60,6 +60,20 @@ class ThemeProvider extends React.Component {
   }
 }
 
+/**
+ * @param {Object} styles css module object
+ * @returns {Object} map of classnames for theme
+ * EX: {
+ *   light: {
+ *     button: 'header-module--title--123'
+ *   }
+ *   dark: {
+ *     button: 'header-module--title--123 header-module--title__dark--123'
+ *   }
+ * }
+ * This makes it easier to write the default styles as light and override only
+ * the colors with the dark theme
+ */
 function getTheme(styles) {
   let r = { dark: {}, light: {} }
   for (let [k, v] of Object.entries(styles)) {
