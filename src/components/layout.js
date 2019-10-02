@@ -1,43 +1,37 @@
 import React from "react"
-import { connect } from "react-redux"
 
 import Header from "./header"
 import ScrollToTop from "./ScrollToTop"
-
 import ParticleAnimation from "./ParticleAnimation"
 import AnimationToggle from "./AnimationToggle"
 import ThemeToggle from "./ThemeToggle"
+
+import ThemeContext, { getTheme } from "./theme"
 
 import "../styles/reset.css"
 import "../styles/main.css"
 import styles from "./layout.module.css"
 
-const Layout = ({ children, showAnimation, theme }) => {
-  const main = styles.main + (theme === "dark" ? " " + styles.main__dark : "")
-  const container =
-    styles.container + (theme === "dark" ? " " + styles.container__dark : "")
-  const content =
-    styles.content + (theme === "dark" ? " " + styles.content__dark : "")
+const Layout = ({ children }) => {
+  const s = getTheme(styles)
   return (
-    <div className={main}>
-      {showAnimation && <ParticleAnimation />}
-      <AnimationToggle />
-      <ThemeToggle />
-      <div className={container}>
-        <div className={content}>
-          <Header />
-          {children}
+    <ThemeContext.Consumer>
+      {({ theme, animation }) => (
+        <div className={s[theme].main}>
+          {animation && <ParticleAnimation />}
+          <AnimationToggle />
+          <ThemeToggle />
+          <div className={s[theme].container}>
+            <div className={s[theme].content}>
+              <Header />
+              {children}
+            </div>
+          </div>
+          <ScrollToTop />
         </div>
-      </div>
-      <ScrollToTop />
-    </div>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 
-const mapStateToProps = ({ showAnimation, theme }) => {
-  return { showAnimation, theme }
-}
-
-const ConnectedLayout = connect(mapStateToProps)(Layout)
-
-export default ConnectedLayout
+export default Layout

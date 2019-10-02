@@ -1,6 +1,7 @@
 import React from "react"
-import { connect } from "react-redux"
 import { GoChevronUp } from "react-icons/go"
+
+import ThemeContext, { getTheme } from "./theme"
 
 import styles from "./ScrollToTop.module.css"
 
@@ -17,19 +18,22 @@ class ScrollToTop extends React.Component {
     this.setState({ show: height > frame })
   }
   render() {
-    const { theme } = this.props
-    const button =
-      styles.button + (theme === "dark" ? " " + styles.button__dark : "")
+    const s = getTheme(styles)
     return (
-      this.state.show && (
-        <button className={button} onClick={_ => window.scrollTo(0, 0)}>
-          <GoChevronUp />
-        </button>
-      )
+      <ThemeContext.Consumer>
+        {({ theme }) =>
+          this.state.show && (
+            <button
+              className={s[theme].button}
+              onClick={_ => window.scrollTo(0, 0)}
+            >
+              <GoChevronUp />
+            </button>
+          )
+        }
+      </ThemeContext.Consumer>
     )
   }
 }
 
-const ConnectedScrollToTop = connect(({ theme }) => ({ theme }))(ScrollToTop)
-
-export default ConnectedScrollToTop
+export default ScrollToTop

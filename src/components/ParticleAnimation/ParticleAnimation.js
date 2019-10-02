@@ -1,15 +1,12 @@
 import React from "react"
-import { connect } from "react-redux"
 
-import { run, setColors } from "./particleSystem"
+import { run } from "./particleSystem"
 
 import styles from "./ParticleAnimation.module.css"
 
 class ParticleAnimation extends React.Component {
   componentDidMount() {
-    const { theme } = this.props
     const canvas = document.getElementById("particles")
-    setColors(theme)
     run(canvas)
   }
   render() {
@@ -17,8 +14,4 @@ class ParticleAnimation extends React.Component {
   }
 }
 
-const ConnectedParticleAnimation = connect(({ theme }) => ({ theme }))(
-  ParticleAnimation
-)
-
-export default ConnectedParticleAnimation
+export default ParticleAnimation

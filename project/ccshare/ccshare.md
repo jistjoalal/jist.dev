@@ -1,6 +1,6 @@
 ---
 title: "CCShare"
-date: "2019-09-29T05:00:24.536Z"
+date: "2019-09-29T04:00:24.536Z"
 description: "A resource sharing platform for teachers."
 repo: "https://github.com/jistjoalal/resource-share"
 techs: "Meteor, React, AWS, Cheerio, Cypress, TravisCI"

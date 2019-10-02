@@ -1,30 +1,21 @@
 import React from "react"
-import { connect } from "react-redux"
 import { GoGitMerge } from "react-icons/go"
+
+import ThemeContext, { getTheme } from "./theme"
 
 import styles from "./AnimationToggle.module.css"
 
-const ToggleButton = ({ showAnimation, theme, toggle }) => {
-  const button =
-    styles.button + (theme === "dark" ? " " + styles.button__dark : "")
+const ToggleButton = () => {
+  const s = getTheme(styles)
   return (
-    <button onClick={toggle} className={button}>
-      <GoGitMerge />
-    </button>
+    <ThemeContext.Consumer>
+      {({ theme, toggleAnimation }) => (
+        <button onClick={toggleAnimation} className={s[theme].button}>
+          <GoGitMerge />
+        </button>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 
-const mapStateToProps = ({ showAnimation, theme }) => {
-  return { showAnimation, theme }
-}
-
-const mapDispatchToProps = dispatch => {
-  return { toggle: () => dispatch({ type: `TOGGLE_ANIMATION` }) }
-}
-
-const ToggleAnimation = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ToggleButton)
-
-export default ToggleAnimation
+export default ToggleButton

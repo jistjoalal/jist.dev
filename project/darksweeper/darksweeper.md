@@ -1,6 +1,6 @@
 ---
 title: "Darksweeper"
-date: "2019-09-29T05:00:24.536Z"
+date: "2019-09-29T03:00:24.536Z"
 description: "Minesweeper with a dark theme and other fun features."
 repo: "https://github.com/jistjoalal/darksweeper"
 techs: "React, Node, Express, GraphQL, MongoDB, AWS"

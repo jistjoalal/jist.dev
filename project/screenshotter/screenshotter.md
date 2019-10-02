@@ -1,6 +1,6 @@
 ---
 title: "Screenshotter"
-date: "2019-09-29T05:00:24.536Z"
+date: "2019-09-29T02:00:24.536Z"
 description: "A web API for taking screenshots of web pages."
 repo: "https://github.com/jistjoalal/screenshotter"
 techs: "Node, Express, Puppeteer, Chai, Mocha, Heroku, TravisCI"
