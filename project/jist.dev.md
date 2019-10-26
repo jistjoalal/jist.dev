@@ -1,6 +1,6 @@
 ---
 title: "jist.dev"
-date: "2019-09-29T05:00:24.536Z"
+date: "2019-09-29T01:00:24.536Z"
 description: "You're looking at it! A Gatsby site for my blog and projects."
 repo: "https://github.com/jistjoalal/jist.dev"
 techs: "Gatsby, React, Redux, GraphQL, KaTeX, Prism"
