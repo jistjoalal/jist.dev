@@ -6,7 +6,7 @@ repo: "https://github.com/jistjoalal/darksweeper"
 techs: "React, Node, Express, GraphQL, MongoDB, AWS"
 ---
 
-[![darksweeper](./darksweeper.png)](https://darksweeper.com)
+[![darksweeper](./darksweeper.png)](https://ds.jist.dev)
 
 ## Impact
 
@@ -14,7 +14,7 @@ Minesweeper is a classic puzzle game. I spent many hours uncovering numerical pa
 
 I posted Darksweeper to reddit a while back, and for some reason this month it's gotten more popular. There's nearly 15 pages of high scores now and my AWS bill is more than pennies for the first time. But I still have the high score! See if you can beat it:
 
-[Darksweeper](https://darksweeper.com/)
+[Darksweeper](https://ds.jist.dev/)
 
 ## Challenges
 
